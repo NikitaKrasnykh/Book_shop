@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./build/main.css">
+    <title>Bookshop</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">Bookshop</h1>
+            <nav>
+                <ul class="header__navigation">
+                    <li><a class="header__link header__link_state_selected" href="#">Books</a></li>
+                    <li><a class="header__link" href="#">Audiobooks</a></li>
+                    <li><a class="header__link" href="#">Stationery & gifts</a></li>
+                    <li><a class="header__link" href="#">blog</a></li>
+                </ul>
+            </nav>
+            <div class="header__user-panel">
+                <button class="header__button header__user-profile"></button>
+                <button class="header__button header__search"></button>
+                <button class="header__button header__cart"></button>
+                <p class="header__items-count">3</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner">
+            <img class="banner__image" src="#" alt="#">
+            <div class="banner__buttons-container">
+                <button class="banner__radio-button banner__radio-button_type_selected" data-index="0"></button>
+                <button class="banner__radio-button" data-index="1"></button>
+                <button class="banner__radio-button" data-index="2"></button>
+            </div>
+            <a href="#"><img src="./src/images/promo_01.png" alt="" class="promo-image promo-image_position_top"></a>
+            <a href="#"><img src="./src/images/promo_02.png" alt="" class="promo-image promo-image_position_left"></a>
+        </section>
+        <section class="books">
+            <ul class="books__menu">
+                <li class="books__menu-item books__menu-item_type_selected"><button class="books__menu-button"
+                        type="button" data-type="Architecture">Architecture</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Art & Fashion">Art & Fashion</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Biography">Biography</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Business">Business</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Crafts & Hobbies">Crafts & Hobbies</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Drama">Drama</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Fiction">Fiction</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Food & Drink">Food & Drink</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Health & Wellbeing">Health & Wellbeing</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="History & Politics">History & Politics</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Humor">Humor</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Poetry">Poetry</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Psychology">Psychology</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Science">Science</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Technology">Technology</button></li>
+                <li class="books__menu-item"><button class="books__menu-button" type="button"
+                        data-type="Travel & Maps">Travel & Maps</button></li>
+            </ul>
+            <div class="books__cards">
+            </div>
+            <button class="book__more-button" type="button">load more</button>
+        </section>
+    </main>
+    <template id="card__template">
+        <div class="book__card">
+            <img loading="lazy" class="book__img" src="./src/images/book_default.png" alt="book">
+            <div class="book__info-container">
+                <p class="book__author"></p>
+                <h2 class="book__name"></h2>
+                <div class="book__review-container">
+                    <svg class="book__review-star" xmlns="http://www.w3.org/2000/svg" width="12" height="11"
+                    viewBox="0 0 12 11" fill="none">
+                    <defs>
+                        <linearGradient id="half_grad">
+                            <stop id="starFill" offset="0%" stop-color="#F2C94C"/>
+                            <stop offset="0%" stop-color="#EEEDF5"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="color_path" d="M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z"
+                    fill="url(#half_grad)"/>
+                    </svg>
+                    <svg class="book__review-star" xmlns="http://www.w3.org/2000/svg" width="12" height="11"
+                    viewBox="0 0 12 11" fill="none">
+                    <defs>
+                        <linearGradient id="half_grad">
+                            <stop id="starFill" offset="0%" stop-color="#F2C94C"/>
+                            <stop offset="0%" stop-color="#EEEDF5"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="color_path" d="M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z"
+                    fill="url(#half_grad)"/>
+                    </svg>
+                    <svg class="book__review-star" xmlns="http://www.w3.org/2000/svg" width="12" height="11"
+                    viewBox="0 0 12 11" fill="none">
+                    <defs>
+                        <linearGradient id="half_grad">
+                            <stop id="starFill" offset="0%" stop-color="#F2C94C"/>
+                            <stop offset="0%" stop-color="#EEEDF5"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="color_path" d="M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z"
+                    fill="url(#half_grad)"/>
+                    </svg>
+                    <svg class="book__review-star" xmlns="http://www.w3.org/2000/svg" width="12" height="11"
+                    viewBox="0 0 12 11" fill="none">
+                    <defs>
+                        <linearGradient id="half_grad">
+                            <stop id="starFill" offset="0%" stop-color="#F2C94C"/>
+                            <stop offset="0%" stop-color="#EEEDF5"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="color_path" d="M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z"
+                    fill="url(#half_grad)"/>
+                    </svg>
+                    <svg class="book__review-star" xmlns="http://www.w3.org/2000/svg" width="12" height="11"
+                    viewBox="0 0 12 11" fill="none">
+                    <defs>
+                        <linearGradient id="half_grad">
+                            <stop id="starFill" offset="0%" stop-color="#F2C94C"/>
+                            <stop offset="0%" stop-color="#EEEDF5"/>
+                        </linearGradient>
+                    </defs>
+                    <path id="color_path" d="M6 0L7.80568 3.5147L11.7063 4.1459L8.92165 6.9493L9.52671 10.8541L6 9.072L2.47329 10.8541L3.07835 6.9493L0.293661 4.1459L4.19432 3.5147L6 0Z"
+                    fill="url(#half_grad)"/>
+                    </svg>
+                    <p class="book__review-count"></p>
+                </div>
+                <p class="book__description"></p>
+                <p class="book__price"></p>
+                <button class="book__buy-button" type="button">buy now</button>
+            </div>
+        </div>
+    </template>
+    <script src="./build/main.js" type="module"></script>
+</body>
+
+</html>
